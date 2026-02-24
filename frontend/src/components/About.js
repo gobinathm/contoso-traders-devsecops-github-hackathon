@@ -162,12 +162,6 @@ export default function About() {
                         >
                             Get in Touch
                         </a>
-                        <a
-                            href="#"
-                            className="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-blue-800 transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
-                        >
-                            Learn More
-                        </a>
                     </div>
                 </div>
             </section>
