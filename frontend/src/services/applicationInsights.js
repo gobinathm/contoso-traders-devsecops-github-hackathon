@@ -1,5 +1,4 @@
 import { ApplicationInsights } from '@microsoft/applicationinsights-web';
-import { AngularPlugin } from '@microsoft/applicationinsights-angularjs-loader';
 import { ReactPlugin } from '@microsoft/applicationinsights-react-js';
 
 let appInsights;
