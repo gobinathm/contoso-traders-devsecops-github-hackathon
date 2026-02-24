@@ -18,7 +18,6 @@ updates:
       interval: "daily"
     open-pull-requests-limit: 5
     rebase-strategy: "auto"
-    versioning-strategy: "increase"
     commit-message:
       prefix: "deps(backend):"
     labels:
