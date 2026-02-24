@@ -1,5 +1,15 @@
 var builder = WebApplication.CreateBuilder(args);
 
+// Add Application Insights
+var connectionString = builder.Configuration["ApplicationInsights:ConnectionString"] 
+  ?? Environment.GetEnvironmentVariable("APPLICATIONINSIGHTS_CONNECTION_STRING");
+
+if (!string.IsNullOrEmpty(connectionString))
+{
+    builder.Services.AddApplicationInsightsTelemetry(o =>
+        o.ConnectionString = connectionString);
+}
+
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
