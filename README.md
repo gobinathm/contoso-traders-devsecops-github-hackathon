@@ -145,3 +145,4 @@ It demonstrates how CI/CD, security automation, AI-assisted development, and mon
 
 **Built with DevSecOps. Secured with Automation. Accelerated with AI.**
 
+AZURE_KEY=abcd1234secret
