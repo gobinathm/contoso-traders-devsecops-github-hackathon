@@ -44,7 +44,6 @@ jobs:
         with:
           app-name: ${{ secrets.AZURE_APPSERVICE_NAME }}
           package: backend/publish
-          clean: true
 
   deploy-frontend:
     name: Deploy Frontend to Azure
