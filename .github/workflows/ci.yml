@@ -48,7 +48,7 @@ jobs:
       - name: Run frontend tests
         run: |
           cd frontend
-          npm test -- --watchAll=false --passWithNoTests
+          npm test -- --watchAll=false --passWithNoTests --coverage --coverageReporters=text --coverageReporters=lcov
       - name: Upload frontend coverage
         uses: actions/upload-artifact@v4
         if: always()
@@ -83,7 +83,7 @@ jobs:
       - name: Run backend tests
         run: |
           cd backend
-          dotnet test --no-build --verbosity normal
+          dotnet test --no-build --verbosity normal --logger "trx;LogFileName=TestResults.trx" --collect:"XPlat Code Coverage"
       - name: Upload test results
         uses: actions/upload-artifact@v4
         if: always()
