@@ -19,13 +19,13 @@ jobs:
         uses: actions/cache@v4
         with:
           path: frontend/node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('frontend/**/package-lock.json') }}
+          key: ${{ runner.os }}-node-${{ hashFiles('frontend/**/package-lock.json','frontend/**/package.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
       - name: Install and build frontend
         run: |
           cd frontend
-          npm ci
+          npm install --prefer-offline --no-audit --no-fund
           npm run build
 
   build-backend:
